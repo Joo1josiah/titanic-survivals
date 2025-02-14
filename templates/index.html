@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Survival Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        input, select, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titanic Survival Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Pclass">Passenger Class:</label>
+        <select name="Pclass" id="Pclass">
+            <option value="1">1st Class</option>
+            <option value="2">2nd Class</option>
+            <option value="3">3rd Class</option>
+        </select>
+        
+        <label for="Sex">Gender:</label>
+        <select name="Sex" id="Sex">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+        </select>
+        
+        <label for="Age">Age:</label>
+        <input type="number" name="Age" id="Age" step="0.1" required>
+        
+        <label for="SibSp">Siblings/Spouses Aboard:</label>
+        <input type="number" name="SibSp" id="SibSp" required>
+        
+        <label for="Parch">Parents/Children Aboard:</label>
+        <input type="number" name="Parch" id="Parch" required>
+        
+        <label for="Fare">Fare:</label>
+        <input type="number" name="Fare" id="Fare" step="0.01" required>
+        
+        <label for="Embarked">Port of Embarkation:</label>
+        <select name="Embarked" id="Embarked">
+            <option value="0">Cherbourg</option>
+            <option value="1">Queenstown</option>
+            <option value="2">Southampton</option>
+        </select>
+        
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
